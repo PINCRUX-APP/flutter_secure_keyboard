@@ -50,6 +50,10 @@ class WithSecureKeyboard extends StatefulWidget {
   /// Default value is `const Color(0xFF1C7CDC)`.
   final Color doneKeyColor;
 
+   /// jimmy 추가
+  /// dony key text color
+  final Color doneKeyTextColor;
+
   /// The key color when the shift action key is activated.
   /// If the value is null, `doneKeyColor` is used.
   final Color? activatedKeyColor;
@@ -76,6 +80,7 @@ class WithSecureKeyboard extends StatefulWidget {
     this.stringKeyColor = kKeyboardDefaultStringKeyColor,
     this.actionKeyColor = kKeyboardDefaultActionKeyColor,
     this.doneKeyColor = kKeyboardDefaultDoneKeyColor,
+    this.doneKeyTextColor = Colors.white,
     this.activatedKeyColor,
     this.keyTextStyle = kKeyboardDefaultKeyTextStyle,
     this.inputTextStyle = kKeyboardDefaultInputTextStyle,
