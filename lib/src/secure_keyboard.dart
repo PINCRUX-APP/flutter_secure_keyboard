@@ -156,6 +156,10 @@ class SecureKeyboard extends StatefulWidget {
   /// Default value is `const Color(0xFF1C7CDC)`.
   final Color doneKeyColor;
 
+  /// jimmy 추가
+  /// dony key text color
+  final Color doneKeyTextColor;
+    
   /// The key color when the shift action key is activated.
   /// If the value is null, `doneKeyColor` is used.
   final Color? activatedKeyColor;
@@ -198,6 +202,7 @@ class SecureKeyboard extends StatefulWidget {
     this.stringKeyColor = kKeyboardDefaultStringKeyColor,
     this.actionKeyColor = kKeyboardDefaultActionKeyColor,
     this.doneKeyColor = kKeyboardDefaultDoneKeyColor,
+    this.doneKeyTextColor = Colors.white,
     this.activatedKeyColor,
     this.keyTextStyle = kKeyboardDefaultKeyTextStyle,
     this.inputTextStyle = kKeyboardDefaultInputTextStyle,
@@ -569,7 +574,7 @@ class _SecureKeyboardState extends State<SecureKeyboard> {
         if (keyText == null || keyText.isEmpty) {
           keyText = (Platform.localeName == 'ko_KR') ? '입력완료' : 'Done';
         }
-        keyData = Text(keyText, style: widget.keyTextStyle);
+        keyData = Text(keyText, style: widget.keyTextStyle.copyWith(color: widget.doneKeyTextColor),);
         break;
       case SecureKeyboardKeyAction.SPECIAL_CHARACTERS:
         keyData = Text(
