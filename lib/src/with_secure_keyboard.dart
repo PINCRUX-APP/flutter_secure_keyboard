@@ -226,6 +226,7 @@ class _WithSecureKeyboardState extends State<WithSecureKeyboard> {
       stringKeyColor: widget.stringKeyColor,
       actionKeyColor: widget.actionKeyColor,
       doneKeyColor: widget.doneKeyColor,
+      doneKeyTextColor: widget.doneKeyTextColor,
       activatedKeyColor: widget.activatedKeyColor,
       keyTextStyle: widget.keyTextStyle,
       inputTextStyle: widget.inputTextStyle,
